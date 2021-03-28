@@ -1,12 +1,11 @@
 <%- include('../partials/header') %>
 
 <form id="new-form" action="/books" method="POST"></form>
-<label>Author:
-    <select name="airline">
-        <option value="American">American</option>
-        <option value="Southwest">Southwest</option>
-        <option value="United">United</option>
-      </select>
-  </label><br>
+<label>Title:</label>
+<input type="text" name="title">
+<label>Author:</label>
+<input type="text" name="author">
+<input type="submit" value="Add Book">
+</form>
 
 <%- include('../partials/footer') %>

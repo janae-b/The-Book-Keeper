@@ -7,7 +7,7 @@ module.exports = {
 }
 
 function newBook(req, res) {
-    res.render('books/new', { title: 'Add Book'});
+    res.render('books/new', { title: 'Add Book', user: req.user});
 }
 
 function index(req, res) {
@@ -15,7 +15,7 @@ function index(req, res) {
     console.log('books', books)
     res.render('books/index', {
         title: 'All Books',
-        books: books
+        books
         })
     })
 }
