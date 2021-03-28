@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<h3>Readers List Page</h3>
+<% users.forEach(u => { %>
+  <a href="/users/<%= u._id %>">
+    <div class="card">
+      <div class="card-body">
+        <img 
+          height="50"
+          id="avatarPhoto"
+        > 
+        <%= u.name %> - Joined on 
+        <%= u.createdAt.toLocaleString().split(',')[0] %>
+      </div>
+    </div>
+  </a><br>
+<% }) %>
+
+
+<%- include('../partials/footer') %>

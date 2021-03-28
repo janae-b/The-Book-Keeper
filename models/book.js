@@ -13,6 +13,8 @@ const bookSchema = new Schema({
     title: String,
     author: String,
     reviews: [reviewSchema]
-}, {timestamps:true})
+}, {
+    timestamps:true
+})
 
 module.exports = mongoose.model("Book", bookSchema)
