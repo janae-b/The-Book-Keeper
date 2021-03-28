@@ -3,7 +3,8 @@ const Book = require('../models/book')
 
 module.exports = {
     new: newBook,
-    index
+    index,
+    create
 }
 
 function newBook(req, res) {
@@ -19,3 +20,14 @@ function index(req, res) {
         })
     })
 }
+
+function create(req, res) {
+    for (let key in req.body) {
+      if (req.body[key] === '') delete req.body[key]
+    }
+    const book = new Book(req.body)
+    book.save(function(err) {
+      if (err){ return res.redirect('/books/new')} 
+      res.redirect(`/books/${book._id}`)
+    })
+  }
