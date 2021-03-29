@@ -12,6 +12,7 @@ timestamps:true
 const bookSchema = new Schema({
     title: String,
     author: String,
+    readAgain: {type: Boolean, default: false },
     reviews: [reviewSchema]
 }, {
     timestamps:true

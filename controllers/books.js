@@ -30,6 +30,7 @@ function index(req, res) {
 }
 
 function create(req, res) {
+    req.body.readAgain = !!req.body.readAgain;
     const book = new Book(req.body)
     book.save(function(err) {
       if (err){ return res.redirect('/books/new')} 
