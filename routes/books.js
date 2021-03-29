@@ -7,6 +7,7 @@ router.get('/', isLoggedIn, booksCtrl.index)
 router.get('/:id', isLoggedIn, booksCtrl.show)
 router.post('/', isLoggedIn, booksCtrl.create)
 router.post('/:id/reviews', isLoggedIn, booksCtrl.createReview)
+router.delete('/:id',isLoggedIn, booksCtrl.delete)
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();

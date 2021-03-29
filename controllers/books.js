@@ -6,7 +6,15 @@ module.exports = {
     index,
     create,
     show,
-    createReview
+    createReview,
+    delete: deleteBook,
+}
+
+function deleteBook(req, res) {
+    Book.findByIdAndDelete(req.params.id)
+    .then(() => {
+        res.redirect(`/books`)
+    })
 }
 
 function createReview(req, res) {
