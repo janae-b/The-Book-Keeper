@@ -55,9 +55,9 @@ function create(req, res) {
     req.body.readAgain = !!req.body.readAgain;
     const book = new Book(req.body)
     book.save(function(err) {
-      if (err){ return res.redirect('/books/new')} 
+      if (err){ return res.redirect('/books')} 
       console.log(book)
-      res.redirect(`/books/new`)
+      res.redirect(`/books`)
     })
   }
 
