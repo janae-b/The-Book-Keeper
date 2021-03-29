@@ -8,7 +8,7 @@ module.exports = {
     show,
     createReview,
     delete: deleteBook,
-    update
+    update,
 }
 
 function deleteBook(req, res) {
@@ -37,9 +37,11 @@ function show(req, res) {
     })
 }
 
+
 function newBook(req, res) {
     res.render('books/new', { title: 'Add Book', user: req.user});
 }
+
 
 function index(req, res) {
     Book.find({})
