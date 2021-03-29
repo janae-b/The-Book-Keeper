@@ -5,8 +5,22 @@ module.exports = {
     new: newBook,
     index,
     create,
-    show
+    show,
+    createReview
 }
+
+function createReview(req, res) {
+    Book.findById(req.params.id, function(err, book) {
+        // Add the review (from req.body)
+        // and save the movie
+        book.reviews.push(req.body)
+        book.save(function(err) {
+          // Redirect to show view
+        res.redirect(`/books/${book._id}`)
+        })
+    })
+}
+
 
 function show(req, res) {
     Book.findById(req.params.id, function(err, book) {
