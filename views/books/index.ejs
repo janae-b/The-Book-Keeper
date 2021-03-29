@@ -8,14 +8,19 @@
       </tr>
     </thead>
     <tbody>
+        <% if (!books.length) { %>
+            <h1>Cruella has been here </h1>
+        <% } %> 
       <% books.forEach((b) => { %>
         <tr>
+        <form action="/books/<%= b._id %>?_method=DELETE" method="POST">
+        <td><button type="submit">X</button></td>
         <td><%= b.title %></td>
         <td><%= b.author %></td>
-
         <td><a href="/books/<%= b._id %>">REVIEWS</a></td>
         </tr>
       <% }) %>
+      </form>
     </tbody>
   </table>
 
