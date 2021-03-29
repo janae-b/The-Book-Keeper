@@ -8,6 +8,7 @@ module.exports = {
     show,
     createReview,
     delete: deleteBook,
+    update
 }
 
 function deleteBook(req, res) {
@@ -60,4 +61,12 @@ function create(req, res) {
       res.redirect(`/books`)
     })
   }
+
+  function update(req, res) {
+    req.body.readAgain = !!req.body.readAgain
+    Book.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .then((book) => {
+        res.redirect(`/books`)
+    })
+}  
 
