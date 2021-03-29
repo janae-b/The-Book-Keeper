@@ -1,12 +1,6 @@
 <%- include('../partials/header') %>
 
     <table id='list'>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Author</th>
-      </tr>
-    </thead>
     <tbody>
         <% if (!books.length) { %>
             <h1>Let's add some books! </h1>
@@ -18,14 +12,18 @@
         <td><button type="submit"class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
           <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
         </svg>Make a Mistake?</button></td>
+        <th>Title</th>
         <td><%= b.title %></td>
+        <th>Author</th>
         <td><%= b.author %></td>
+        <th>Have you read it before?</th>
+        <td><%= b.readAgain ? 'Yes' : 'No' %></td>
         <td><a href="/books/<%= b._id %>">Add A Review</a></td>
         </tr>
       <% }) %>
       </form>
     </tbody>
   </table>
-
+  
 
   <%- include('../partials/footer') %>

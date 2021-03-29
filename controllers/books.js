@@ -70,5 +70,5 @@ function create(req, res) {
     .then((book) => {
         res.redirect(`/books`)
     })
-}  
+}   
 
