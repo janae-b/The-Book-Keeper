@@ -15,10 +15,10 @@
       <% books.forEach((b) => { %>
         <tr>
         <form action="/books/<%= b._id %>?_method=DELETE" method="POST">
-        <td><button type="submit">X</button></td>
+        <td><button type="submit">Make a Mistake?</button></td>
         <td><%= b.title %></td>
         <td><%= b.author %></td>
-        <td><a href="/books/<%= b._id %>">REVIEWS</a></td>
+        <td><a href="/books/<%= b._id %>">Add A Review</a></td>
         </tr>
       <% }) %>
       </form>
