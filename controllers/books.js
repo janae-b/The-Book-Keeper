@@ -4,7 +4,14 @@ const Book = require('../models/book')
 module.exports = {
     new: newBook,
     index,
-    create
+    create,
+    show
+}
+
+function show(req, res) {
+    Book.findById(req.params.id, function(err, book) {
+        res.render('books/show', { title: 'Book Review', user: req.user, book})
+    })
 }
 
 function newBook(req, res) {

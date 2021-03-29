@@ -3,7 +3,7 @@ const booksCtrl = require("../controllers/books")
 
 router.get('/', isLoggedIn, booksCtrl.index)
 router.get('/new', isLoggedIn, booksCtrl.new)
-router.get('/:id')
+router.get('/:id', isLoggedIn, booksCtrl.show)
 router.post('/', isLoggedIn, booksCtrl.create)
 
 function isLoggedIn(req, res, next) {
