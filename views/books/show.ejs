@@ -55,13 +55,11 @@
   <h5>No Reviews Yet</h5>
 <% } %>
 
-<h3>Would you like to update your book and review?</h3>
+<h3>Would you like to update your book?</h3>
 <form action="/books/<%= book._id %>?_method=PUT" method="POST">
   <input type="text" value="<%= book.title %>" name="title" placeholder="Title">
   <input type="text" value="<%= book.author %>" name="author" placeholder="Author">
   <input type="checkbox" <%= book.readAgain ? 'checked' : '' %> name="readAgain">Have you read this before?<br><br>
-  <input type="text" value="<%= book.reviews.comment %>" name="comment" placeholder="New Review">
-  <input type="number" min="1" max="5" value="<%= book.reviews.rating %>" name="rating" placeholder="New Rating">
   <button type='submit'>Update Book Info</button>
 </form>
 
