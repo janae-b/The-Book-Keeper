@@ -16,6 +16,7 @@ function index(req, res) {
     console.log('books', books)
     res.render('books/index', {
         title: 'All Books',
+        user: req.user,
         books
         })
     })
@@ -29,3 +30,4 @@ function create(req, res) {
       res.redirect(`/books/new`)
     })
   }
+
