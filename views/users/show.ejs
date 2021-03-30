@@ -8,11 +8,11 @@
 		id="avatarPhoto"
 		style="height: 18rem;"
 		class="card-img-top"
-		src="<%= userInfo.avatar ? userInfo.avatar : 'http://theoldreader.com/kittens/300/300/' %>" 
+		src="<%= userInfo.avatar %>" 
 		alt="Card image cap">
   <div class="card-header"></div>
   <div class="card-body">
-    <h5 class="card-title"><%= userInfo.name %></h5>
+    <h2 class="card-title"><%= userInfo.nickname %></h2>
     <% // Let's clean up the date data to show the day the user joined %>
     <p class="card-text">
 			Joined: <%= userInfo.createdAt.toLocaleString().split(',')[0] %>

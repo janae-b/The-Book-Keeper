@@ -5,7 +5,7 @@
   <a href="/users/<%= u._id %>">
     <div class="card">
       <div class="card-body">
-        <img src="<%= user.avatar %> " class ="avatar-photo-med" alt="">
+        <img src="<%= u.avatar %> " class ="avatar-photo-med" alt="">
         <%= u.name %> - Joined on 
         <%= u.createdAt.toLocaleString().split(',')[0] %>
       </div>
