@@ -12,7 +12,7 @@ const watchListSchema = new Schema({
 const userSchema = new Schema(
   {
     name: String,
-    alias: String,
+    nickname: String,
     email: String,
     avatar: String,
     googleId: String,

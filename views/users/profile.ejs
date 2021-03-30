@@ -69,7 +69,7 @@
 		>
       <div class="card-body">
 	      <h5 class="card-title">Name: <%= user.name %></h5>
-        <p class="card-text">Alias: <%= user.alias %></p>
+        <p class="card-text">Nickname: <%= user.nickname %></p>
         <p class="card-text">Email: <%= user.email %></p>
         <p class="card-text">Bio: <%= user.bio %></p>
       </div>
@@ -86,13 +86,13 @@
         <form action="/users/profile?_method=PUT" method="POST">
           <div class="form-row">
             <div class="col-md-4">
-              <label for="userAlias">Alias:</label>
+              <label for="userNickname">Nickname:</label>
               <input
                 type="text"
-                id="userAlias"
+                id="userNickname"
                 class="form-control"
-                name="alias"
-                value="<%= user.alias %>"
+                name="nickname"
+                value="<%= user.nickname %>"
               />
             </div>
             <br />
@@ -143,7 +143,7 @@
               src="<%= f.avatar %>"
               alt=""
             />
-            <%= f.name %> <%= f.alias ? `(${f.alias})` : '' %>
+            <%= f.name %> <%= f.nickname ? `(${f.nickname})` : '' %>
           </a><br><br>
         <% }) %>
       </div>
