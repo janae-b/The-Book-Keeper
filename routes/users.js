@@ -3,7 +3,7 @@ const usersCtrl = require("../controllers/users");
 
 
 router.get("/profile", isLoggedIn, usersCtrl.showProfile)
-
+router.get("/", isLoggedIn, usersCtrl.index);
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
