@@ -16,7 +16,7 @@ const bookSchema = new Schema({
         type: String,
         enum: ['👍', '👎']
     },
-    readAgain: {type: Boolean, default: false },
+    readTwice: {type: Boolean, default: false },
     collectedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
     reviews: [reviewSchema]
 }, {

@@ -18,7 +18,7 @@
               Author: <%= b.author %>
             </p>
             <p class="card-text">
-              Have you read it before? <%= b.readAgain ? 'Yes' : 'No' %> %>
+              Have you read it before? <%= b.readTwice ? 'Yes' : 'No' %> %>
             </p>
             <p class="card-text">
               Overall Impression: <%= b.overallImpression %>
@@ -35,7 +35,7 @@
         <th>Author</th>
         <td><%= b.author %></td>
         <th>Have you read it before?</th>
-        <td><%= b.readAgain ? 'Yes' : 'No' %></td>
+        <td><%= b.readTwice ? 'Yes' : 'No' %></td>
         <th>Overall First Impression</th>
         <td><%= b.overallImpression %></td>
         <th>Reviews</th>

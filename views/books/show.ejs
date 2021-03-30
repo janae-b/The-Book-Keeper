@@ -6,7 +6,7 @@
   <div>Author: </div>
   <div><%= book.author %></div>
   <div>Have you read this before?: </div>
-  <div><%= book.readAgain ? 'Yes' : 'No' %></div>
+  <div><%= book.readTwice ? 'Yes' : 'No' %></div>
   <div>Overall Impression: </div>
   <div><%= book.overallImpression %></div>
 </section>
@@ -61,7 +61,7 @@
 <form action="/books/<%= book._id %>?_method=PUT" method="POST">
   <input type="text" value="<%= book.title %>" name="title" placeholder="Title">
   <input type="text" value="<%= book.author %>" name="author" placeholder="Author">
-  <input type="checkbox" <%= book.readAgain ? 'checked' : '' %> name="readAgain">Have you read this before?<br><br>
+  <input type="checkbox" <%= book.readTwice ? 'checked' : '' %> name="readAgain">Have you read this before?<br><br>
   <button type='submit'>Update Book Info</button>
 </form>
 
