@@ -2,12 +2,126 @@
 
 <h3><%= title %></h3>
 
-<div class="profile">
-  <img src="<%= user.avatar %> " class ="avatar-photo-med" alt="">
-  <h3><%= user.name %> </h3>
+<div class="card" style="width: 36rem;">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a 
+				class="nav-link active"
+				id="profileinfo-tab"
+				data-toggle="tab"
+				href="#profileinfo"
+				role="tab"
+				aria-controls="profileinfo"
+				aria-selected="true"
+			>
+				My Info
+			</a>
+    </li>
+    <% // This is the info for the 'update' tab %>
+    <li class="nav-item">
+      <a 
+				class="nav-link"
+				id="updateinfo-tab"
+				data-toggle="tab"
+				href="#updateinfo"
+				role="tab"
+				aria-controls="updateinfo"
+				aria-selected="false"
+			>
+				Update Info
+			</a>
+    </li>
+    <% // This is the info for the 'friends' tab %>
+    <li class="nav-item">
+      <a 
+				class="nav-link"
+				id="friends-tab"
+				data-toggle="tab"
+				href="#friends"
+				role="tab"
+				aria-controls="friends"
+				aria-selected="false"
+			>
+				Friends
+			</a>
+    </li>
+  </ul>  
+  <div class="tab-content" id="myTabContent">
+    <div 
+			class="tab-pane fade show active"
+			id="profileinfo"
+			role="tabpanel"
+			aria-labelledby="profileinfo-tab"
+		>
+      <div class="card-body">
+	      <h2 class="card-title">Name: <%= user.name %></h2>
+        <h4 class="card-text">Email: <%= user.email %></h4>
+        <p class="card-text">Bio: <%= user.bio %></p>
+      </div>
+    </div>
+    <% // This is the card for the 'update' tab %>
+    <div
+      class="tab-pane fade"
+      id="updateinfo"
+      role="tabpanel"
+      aria-labelledby="updateinfo-tab"
+    >
+      <div class="card-body">
+        <% // This is where we'll put our 'update' route %>
+        <form action="/users/profile?_method=PUT" method="POST">
+
+          <div class="form-row">
+            <div class="col-md-12">
+              <label for="avatarUrl">Avatar Image URL:</label>
+              <input
+                type="text"
+                id="avatarUrl"
+                class="form-control"
+                name="avatar"
+                value="<%= user.avatar %>"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-12">
+              <label for="bio">Bio:</label>
+              <textarea 
+                rows="3" 
+                id="bio"
+                class="form-control"
+                name="bio"
+              >
+                <%= user.bio %>
+              </textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-warning">Update</button>
+        </form>
+      </div>
+    </div>
+    <% // This is the card for the 'friends' tab %>
+    <div
+      class="tab-pane fade"
+      id="friends"
+      role="tabpanel"
+      aria-labelledby="friends-tab"
+    >
+      <div class="card-body">
+	      <% // This is where we'll use a forEach to display friends %>     
+        <% user.friends.forEach(f => { %>
+          <a href="/users/<%= f._id %>">
+            <img 
+              width="30"
+              id="avatarPhoto"
+              src="<%= f.avatar %>"
+              alt=""
+            />
+            <%= f.name %> 
+          </a><br><br>
+        <% }) %>
+      </div>
+    </div>
   </div>
 </div>
-   
-
 
 <%- include('../partials/footer') %>
