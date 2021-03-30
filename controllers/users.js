@@ -5,10 +5,16 @@ module.exports = {
   showProfile,
   index,
   show,
-
+  update
 };
 
-
+function update(req, res) {
+  User.findByIdAndUpdate(req.user._id, req.body, {new: true}) 
+  .then((user) => {
+    console.log(user)
+    res.redirect('/users/profile')
+  })
+}
 
 
 function show(req, res) {
