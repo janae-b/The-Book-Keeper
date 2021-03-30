@@ -7,6 +7,8 @@
   <div><%= book.author %></div>
   <div>Have you read this before?: </div>
   <div><%= book.readAgain ? 'Yes' : 'No' %></div>
+  <div>Overall Impression: </div>
+  <div><%= book.overallImpression %></div>
 </section>
 
 <h2>Reviews</h2>
@@ -15,11 +17,11 @@
   <textarea name="comment"></textarea>
   <label>Rating:</label>
   <select name="rating">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
+    <option value="1">1 Why did someone recommend this?</option>
+    <option value="2">2 This was missing something</option>
+    <option value="3">3 Was pretty okay</option>
+    <option value="4">4 This book was good! Should be a movie too</option>
+    <option value="5">5 EVERYONE SHOULD READ THIS NOW!</option>
   </select>
   <input type="submit" value="Add Review">
 </form>

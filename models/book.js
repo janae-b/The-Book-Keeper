@@ -12,6 +12,10 @@ timestamps:true
 const bookSchema = new Schema({
     title: String,
     author: String,
+    overallRating: {
+        type: String,
+        enum: ['👍', '👎']
+    },
     readAgain: {type: Boolean, default: false },
     collectedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
     reviews: [reviewSchema]

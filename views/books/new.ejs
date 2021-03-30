@@ -3,12 +3,17 @@
 <form id="new-form" action="/books" method="POST">
 <h1>Add the latest book you've read!</h1> <br>
 <label>Title:</label>
-<input type="text" name="title">
+  <input type="text" name="title">
 <label>Author:</label>
-<input type="text" name="author">
-<input type="submit" value="Add Book">
+  <input type="text" name="author">
+  <input type="submit" value="Add Book">
 <label>Have you read this before?</label>
   <input type="checkbox" name="readAgain" checked>
+<label>Overall Impression?<select name="airport">
+  <option value="👍" selected>👍</option>
+  <option value="👎" selected>👎</option>
+</label>
+  
 </form>
 
 
