@@ -1,9 +1,32 @@
 const User = require("../models/user");
+const Book = require("../models/book")
 
 module.exports = {
   showProfile,
-  index
+  index,
+  show,
+
 };
+
+
+
+
+function show(req, res) {
+  User.findById(req.params.id)
+  .then((userInfo) => {
+    Book.find({ collectedBy: userInfo._id })
+    .then((books) => {
+      res.render('users/show', {
+        title: 'User Details',
+        userInfo,
+        user: req.user,
+        books
+      })
+    })
+  })
+}
+
+
 
 function showProfile(req, res) {
   User.findById(req.user._id)
