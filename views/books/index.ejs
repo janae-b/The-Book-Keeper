@@ -20,6 +20,9 @@
             <p class="card-text">
               Have you read it before? <%= b.readAgain ? 'Yes' : 'No' %> %>
             </p>
+            <p class="card-text">
+              Overall Impression: <%= b.overallImpression %>
+            </p>
             <a href="/books/<%= b._id %>" class="btn btn-primary">Add A Review</a>
           </div>
         </div>
@@ -33,6 +36,11 @@
         <td><%= b.author %></td>
         <th>Have you read it before?</th>
         <td><%= b.readAgain ? 'Yes' : 'No' %></td>
+        <th>Overall First Impression</th>
+        <td><%= b.overallImpression %></td>
+        <th>Reviews</th>
+        <td><%= b.rating %></td>
+        <td><%= b.comment %></td>
         <td><a href="/books/<%= b._id %>">Add A Review</a></td>
         </tr>
       <% }) %>

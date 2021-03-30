@@ -19,12 +19,11 @@ function deleteBook(req, res) {
 }
 
 function createReview(req, res) {
-    Book.findById(req.params.id, function(err, book) {
-        // Add the review (from req.body)
-        // and save the movie
+    Book.findById(req.params.id)
+    .then((book) => { 
         book.reviews.push(req.body)
-        book.save(function(err) {
-          // Redirect to show view
+        book.save()
+        .then(()=> {
         res.redirect(`/books/${book._id}`)
         })
     })
@@ -45,11 +44,11 @@ function newBook(req, res) {
 
 function index(req, res) {
     Book.find({})
-    .then(books => {
+    .then (books => {
     res.render('books/index', {
         title: 'All Books',
         user: req.user,
-        books
+        books,
         })
     })
 }
