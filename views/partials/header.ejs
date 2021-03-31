@@ -18,7 +18,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <br><br>
-      <i class="fas fa-book fa-2x"></i> 
+      <img width="40" id="bookShelfPic" src="/images/books.png" alt="">
       <a class="navbar-brand" href="/">Comfy Library</a>
     <button
       class="navbar-toggler"
@@ -38,7 +38,7 @@
             <a class="nav-link" href="/books/new">Add Book</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/books"><%= user.nickname %>'s Read List</a>
+            <a class="nav-link" href="/books"><%= user.nickname ? user.nickname : user.name %>'s Read List</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/users">List of Readers</a>
