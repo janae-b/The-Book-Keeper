@@ -36,6 +36,7 @@ nav {
   font-size: 2.6rem;
   align-items: center;
   justify-content: center;
+  font-family: 'New Tegomin', serif;
  
 }
 
@@ -43,6 +44,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'New Tegomin', serif;
 }
 
 h1 {
@@ -50,6 +52,7 @@ h1 {
   text-align: center;
   justify-content: center;
   color: forestgreen;
+  font-family: 'PT Serif', serif;
 }
 
 .book-list-page {
