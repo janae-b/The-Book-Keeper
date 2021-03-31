@@ -1,19 +1,25 @@
 <%- include('../partials/header') %>
 
-<form id="new-form" action="/books" method="POST">
-<h1>Add the latest book you've read!</h1> <br>
-<label>Title:</label>
-  <input type="text" name="title">
-<label>Author:</label>
-  <input type="text" name="author">
-  <input type="submit" value="Add Book">
-<label>Have you read this before?</label>
-  <input type="checkbox" name="readTwice" checked>
-<label>Overall Impression?<select name="airport">
-  <option value="👍" selected>👍</option>
-  <option value="👎" selected>👎</option>
-</label>
-  </form>
 
+
+<h1>Add the latest book you've read!</h1> <br>
+  <form class="pure-form pure-form-aligned" id="new-form" action="/books" method="POST">
+    <fieldset>
+      
+        <div class="pure-control-group">
+            <label for="aligned-title">Title:</label>
+            <input type="text" name="title" id="aligned-title" placeholder="Title" />
+        </div>
+        <div class="pure-control-group">
+            <label for="aligned-author">Author:</label>
+            <input type="text" name="author" id="aligned-author" placeholder="Author" />
+        </div>
+        <div class="pure-controls">
+            <label for="aligned-readTwice" class="pure-checkbox">
+                <input type="checkbox" id="aligned-readTwice" name="readTwice" /> I&#x27;ve read this book before</label><br>
+            <button type="submit"  value="Add Book" class="pure-button pure-button-primary">Add book to your list</button>
+        </div>
+    </fieldset>
+</form>
 
 <%- include('../partials/footer') %>

@@ -1,5 +1,16 @@
 <%- include('../partials/header') %>
 
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h1 class="card-title"><%= book.title %> </h1>
+    <p class="card-text">
+      Author: <%= book.author %>
+    </p>
+    <p class="card-text">
+      Have you read it before? <%= book.readTwice ? 'Yes' : 'No' %> %>
+    </p>
+</div>
+</div>
 <section id="show-page">
   <div>Title: </div>
   <div><%= book.title %></div>
