@@ -20,7 +20,10 @@ html {
 body {
   background: rgb(2,0,36);
   background-color: #dae6ea;
-background-image: url(../images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg);
+  background-image: url(../images/shelving.jpg);
+  max-width:100%;
+  background-size: 1200px;
+  ;
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -34,6 +37,7 @@ nav {
   font-size: 2.6rem;
   align-items: center;
   justify-content: center;
+ 
 }
 
 main {
@@ -57,18 +61,42 @@ h1 {
   margin: auto;
 }
 
+.profile-card {
+  background-size: cover;
+  background-image: url(../images/shelves-book-illustration-vector.jpg);
+}
+
 .card {
   justify-content: center;
+  
+  text-align: center;
   margin: 10px;
   border-radius: 92px;
   border-radius: 0px;
   border-radius: 0px;
-  background-color: honeydew;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='77' height='107' viewBox='0 0 77 107'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='stamp-collection' fill='%2365666f' fill-opacity='0.21'%3E%3Cpath d='M46 101a5 5 0 0 1 5 5h5a5 5 0 0 1 10 0h5a5 5 0 0 1 5-5v-5a5 5 0 0 1 0-10v-5a5 5 0 0 1 0-10v-5a5 5 0 0 1 0-10v-5a5 5 0 0 1 0-10v-5a5 5 0 0 1 0-10v-5a5 5 0 0 1 0-10V6a5 5 0 0 1-5-5h-5a5 5 0 0 1-10 0h-5a5 5 0 0 1-10 0h-5a5 5 0 0 1-10 0h-5a5 5 0 0 1-10 0H6a5 5 0 0 1-5 5v5a5 5 0 0 1 0 10v5a5 5 0 0 1 0 10v5a5 5 0 0 1 0 10v5a5 5 0 0 1 0 10v5a5 5 0 0 1 0 10v5a5 5 0 0 1 0 10v5a5 5 0 0 1 5 5h5a5 5 0 0 1 10 0h5a5 5 0 0 1 10 0h5a5 5 0 0 1 5-5zm15-2a7 7 0 0 0-6.71 5h-1.58a7 7 0 0 0-13.42 0h-1.58a7 7 0 0 0-13.42 0h-1.58a7 7 0 0 0-13.42 0H7.71A7.01 7.01 0 0 0 3 99.29v-1.58a7 7 0 0 0 0-13.42v-1.58a7 7 0 0 0 0-13.42v-1.58a7 7 0 0 0 0-13.42v-1.58a7 7 0 0 0 0-13.42v-1.58a7 7 0 0 0 0-13.42v-1.58A7 7 0 0 0 3 9.29V7.71A7.02 7.02 0 0 0 7.71 3h1.58a7 7 0 0 0 13.42 0h1.58a7 7 0 0 0 13.42 0h1.58a7 7 0 0 0 13.42 0h1.58a7 7 0 0 0 13.42 0h1.58A7.02 7.02 0 0 0 74 7.71v1.58a7 7 0 0 0 0 13.42v1.58a7 7 0 0 0 0 13.42v1.58a7 7 0 0 0 0 13.42v1.58a7 7 0 0 0 0 13.42v1.58a7 7 0 0 0 0 13.42v1.58a7 7 0 0 0 0 13.42v1.58a7.01 7.01 0 0 0-4.71 4.71h-1.58A7 7 0 0 0 61 99zM12 12h53v83H12V12zm51 81H14V14h49v79z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  background-image: url(../images/book-cover.jpeg);
+}
+
+.card-text {
+  color: rgba(255, 255, 255, 0.838);
+  font-size: larger;
+  font-family: 'Great Vibes', cursive;
+}
+
+.card-title {
+  color: whitesmoke;
+  font-size: x-large;
+  font-family: 'Great Vibes', cursive;;
+}
+
+.card-text-twice {
+
 }
 
 .review-card {
   display: flex;
+  font-family: 'Great Vibes', cursive;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
@@ -77,6 +105,7 @@ h1 {
 
 .card-alone {
   justify-content: center;
+  font-family: 'Great Vibes', cursive;
   margin: 10px;
   border-radius: 92px;
   border-radius: 0px;

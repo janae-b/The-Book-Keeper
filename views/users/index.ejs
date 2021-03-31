@@ -3,7 +3,7 @@
 <h3>Readers List Page</h3>
 <% users.forEach(u => { %>
   <a href="/users/<%= u._id %>">
-    <div class="card">
+    <div class="card-userList">
       <div class="card-body">
         <img src="<%= u.avatar %> " class ="avatar-photo-med" alt="">
         <%= u.name %> - Joined on 
