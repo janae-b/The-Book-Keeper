@@ -17,6 +17,12 @@ html {
     font-size: 62.5%
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   
   background-image: url(../images/shelving.jpg);
