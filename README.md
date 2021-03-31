@@ -23,6 +23,9 @@ I have always loved reading and am even part of a book club.  I tend to keep tra
 * Google OAuth
 * Heroku
 * Bootstrap
+* FontAwesome
+* Hero Patterns
+  
 
 # Next Steps:
 * Ability to create multiple lists

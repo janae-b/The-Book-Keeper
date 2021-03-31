@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 
 <h3>Message Board</h3>
+<div class="message board">
 <form action="/messages" method="POST">
   <div class="form-group">
     <input 
@@ -26,6 +27,7 @@
       <a href="/messages/<%= message._id %>" class="btn btn-primary">See Post</a>
     </div>
   </div>
+</div>  
 <% }) %>
 
 <%- include('../partials/footer') %>
