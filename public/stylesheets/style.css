@@ -128,7 +128,6 @@ h1 {
 .review-card {
   display: flex;
   font-family: 'Great Vibes', cursive;
-  flex-direction: row;
   justify-content: center;
   background-image: url(../images/book-cover.jpeg);
   justify-content: center;
@@ -178,6 +177,27 @@ h1 {
 }
 
 #book-tree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.whole-review-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.written-review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.update-book-form {
   display: flex;
   align-items: center;
   justify-content: center;
