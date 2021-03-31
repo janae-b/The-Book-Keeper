@@ -140,8 +140,16 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 #bookShelfPic {
   margin-right: 15px;
+}
+
+#book-tree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
