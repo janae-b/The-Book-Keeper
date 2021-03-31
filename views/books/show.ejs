@@ -61,7 +61,7 @@
 <form action="/books/<%= book._id %>?_method=PUT" method="POST">
   <input type="text" value="<%= book.title %>" name="title" placeholder="Title">
   <input type="text" value="<%= book.author %>" name="author" placeholder="Author">
-  <input type="checkbox" <%= book.readTwice ? 'checked' : '' %> name="readAgain">Have you read this before?<br><br>
+  <input type="checkbox" <%= book.readTwice ? 'checked' : '' %> name="readTwice">Have you read this before?<br><br>
   <button type='submit'>Update Book Info</button>
 </form>
 

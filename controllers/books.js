@@ -54,7 +54,7 @@ function index(req, res) {
 }
 
 function create(req, res) {
-    req.body.readAgain = !!req.body.readAgain;
+    req.body.readTwice = !!req.body.readTwice;
     const book = new Book(req.body)
     book.save(function(err) {
       if (err){ return res.redirect('/books')} 
@@ -64,7 +64,7 @@ function create(req, res) {
   }
 
   function update(req, res) {
-    req.body.readAgain = !!req.body.readAgain
+    req.body.readTwice = !!req.body.readTwice
     Book.findByIdAndUpdate(req.params.id, req.body, {new: true})
     .then((book) => {
         res.redirect(`/books`)
