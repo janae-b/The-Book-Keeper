@@ -183,11 +183,12 @@ h1 {
   text-align: center;
 }
 
-.whole-review-page {
+.review-page-header {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  flex-direction: column;
 }
 
 .written-review {
