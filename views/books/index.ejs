@@ -1,11 +1,14 @@
 <%- include('../partials/header') %>
-
+<h1>Here are your latest reads</h1>
     
         <% if (!books.length) { %>
-            <h1>Let's add some books! </h1>
+            <h2>No books? Let's add some! </h2>
             <button><a href="/books/new">Add Book</a></button>
         <% } %> 
+        <div class="book-list-page">
       <% books.forEach((b) => { %>
+          
+          <div class="row">
           <div class="card" style="width: 18rem;">
           <div class="card-body">
             <h1 class="card-title"><%= b.title %> </h1>
@@ -25,8 +28,10 @@
               </svg>Make a Mistake?</button></td>
           </div>
         </div>
+      </div>
+    
       <% }) %>
-     
+    </div>
   
 
   <%- include('../partials/footer') %>
