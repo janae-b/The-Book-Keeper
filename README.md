@@ -29,7 +29,8 @@ This app helps you keep track of the books you've recently read. You add the boo
 * Hero Patterns
 
 ## Credits:
-* Icons made by Freepik from www.flaticon.com   
+* Icons made by Freepik from www.flaticon.com 
+* Background vector created by pikisuperstar - www.freepik.com</a>  
 
 # Next Steps:
 * Ability to create multiple lists
