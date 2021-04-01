@@ -1,8 +1,9 @@
 # The Book Keeper App
 ### Where you keep track of the books you've read
 
-## Why I created this:
-I have always loved reading and am even part of a book club.  I tend to keep track of all of the books I read but should really just have an account for my book club so we can keep track of what books we have read recently.  It sparked the idea to create my own version. 
+## Description:
+This app helps you keep track of the books you've recently read. You add the book title and author and can check the box on if you've read it before. You can also add your own rating and make updates to your book title and author. 
+
 
 # Getting Started
 [Here is a link to my trello board](https://trello.com/b/qSS3tFc7/book-keeper)
