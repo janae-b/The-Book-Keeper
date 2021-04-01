@@ -1,14 +1,13 @@
 <%- include('../partials/header') %>
 <h1>Here are your latest reads</h1>
-    
+<div class="review-page-header" >
         <% if (!books.length) { %>
-            <h2>No books? Let's add some! </h2>
-            <button><a href="/books/new">Add Book</a></button>
+          <button class="btn btn-dark"><a href="/books/new">📚  No books? Let's add some! 📚</a></button>
             <img id="book-tree" src="/../images/book-tree.jpeg" alt="">
-        <% } %> 
-        <div class="book-list-page">
+          </div>
+            <% } %> 
+<div class="book-list-page">
       <% books.forEach((b) => { %>
-          
           <div class="row">
           <div class="card" style="width: 25rem;">
           <div class="card-body">
@@ -27,9 +26,9 @@
             </svg> Delete</button></td>
         </div>
       </div>
-    
       <% }) %>
     </div>
+
   
 
   <%- include('../partials/footer') %>
