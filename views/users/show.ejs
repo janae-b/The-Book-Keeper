@@ -1,9 +1,8 @@
 <%- include('../partials/header') %>
 
-<h3><%= title %></h3>
+<h1><%= title %></h1>
 
-<div class="card" style="width: 18rem;">
-  <% // If our user doesn't have an avatar image, let's use a silly cat pic! %>
+<div class="card-user" style="width: 18rem;">
   <img 
 		id="avatarPhoto"
 		style="height: 18rem;"
@@ -13,7 +12,6 @@
   <div class="card-header"></div>
   <div class="card-body">
     <h2 class="card-title"><%= userInfo.nickname %></h2>
-    <% // Let's clean up the date data to show the day the user joined %>
     <p class="card-text">
 			Joined: <%= userInfo.createdAt.toLocaleString().split(',')[0] %>
 		</p>
