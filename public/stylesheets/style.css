@@ -18,7 +18,6 @@ html {
 }
 
 body {
-  
   background-image: url(../images/shelving.jpg);
   max-width:100%;
   background-size: 1200px;
@@ -67,14 +66,15 @@ h1 {
   font-weight: 300;
   font-size: medium;
   width: fit-content;
+  margin-top: 2%
 }
 
 .btn-delete {
   font-weight: 300;
   font-size: medium;
   width: fit-content;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 32%;
+  margin-right: 32%;
 }
 
 .btn-create {
@@ -286,4 +286,8 @@ h1 {
   justify-content: center;
   text-align: center;
   flex-direction: column;
+}
+
+.form-control {
+  font-size: small;
 }
