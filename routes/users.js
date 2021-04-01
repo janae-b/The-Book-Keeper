@@ -6,6 +6,7 @@ router.get("/", isLoggedIn, usersCtrl.index);
 router.get("/profile", isLoggedIn, usersCtrl.showProfile)
 router.get("/:id", isLoggedIn, usersCtrl.show)
 router.put("/profile", isLoggedIn, usersCtrl.update)
+router.put('/profile', isLoggedIn, usersCtrl.addIntro)
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();

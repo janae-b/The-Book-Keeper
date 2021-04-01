@@ -1,4 +1,5 @@
 const Book = require('../models/book')
+const User = require('../models/user')
 
 
 module.exports = {
@@ -43,7 +44,7 @@ function newBook(req, res) {
 
 
 function index(req, res) {
-    Book.find({})
+    Book.find({ collectedBy: req.user._id })
     .then (books => {
     res.render('books/index', {
         title: 'All Books',
@@ -54,6 +55,7 @@ function index(req, res) {
 }
 
 function create(req, res) {
+    req.body.collectedBy = req.user._id
     req.body.readTwice = !!req.body.readTwice;
     const book = new Book(req.body)
     book.save(function(err) {
@@ -69,5 +71,4 @@ function create(req, res) {
     .then((book) => {
         res.redirect(`/books`)
     })
-}   
-
+} 

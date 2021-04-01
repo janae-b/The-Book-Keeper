@@ -1,12 +1,21 @@
 const User = require("../models/user");
-const Book = require("../models/book")
+const Book = require("../models/book");
+const user = require("../models/user");
 
 module.exports = {
   showProfile,
   index,
   show,
-  update
+  update,
+  addIntro
 };
+
+function addIntro(req, res) {
+  user.findByIdAndUpdate(req.user._id, req.body, {new: true})
+  .then(() => {
+    res.redirect('/user/profile')
+  })
+}
 
 function update(req, res) {
   User.findByIdAndUpdate(req.user._id, req.body, {new: true}) 

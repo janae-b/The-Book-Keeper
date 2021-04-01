@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
+
+
+<h1>📖 <%= title %> 📖</h1>
 <div class=message-page>
-<div class=".card-message">
-<h3><%= title %></h3>
 <h4><%= message.title %></h4>
 <h5>
 	Posted on <%= message.createdAt.toLocaleString() %> - <%= message.postedBy %>
@@ -29,5 +30,5 @@
   <button type="submit" class="btn btn-primary">Reply</button>
 </form>
 </div>
-</div>
+
 <%- include('../partials/footer') %>
