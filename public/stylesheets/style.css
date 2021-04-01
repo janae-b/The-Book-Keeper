@@ -45,11 +45,18 @@ main {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3.5rem;
   text-align: center;
   justify-content: center;
   color: forestgreen;
   font-family: 'PT Serif', serif;
+  margin-left: 35%;
+  margin-right: 35%;
+  background-color: gainsboro;
+}
+
+h1 {
+
 }
 
 .message-board {
@@ -100,22 +107,25 @@ h1 {
 }
 
 .card-message {
-  background-color: #e8dfd3;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2395ac92' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");;
+  background-color: #f7f7f7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23888390' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  display: flex;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 10px, 40px, 20px, 20px;
-  border-radius: 92px;
-  border-radius: 0px;
-  background-size: cover;
-  padding-top: 20%;
-  padding-bottom: 10%;
-  padding-right: 0%;
-  padding-left: 20%
+  flex-direction: column;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.card-title-message {
+  color: black;
+  font-size: x-large;
+  font-family: 'New Tegomin', serif;
 }
 
 .card-title {
-  color: whitesmoke;
+  color: white;
   font-size: x-large;
   font-family: 'Great Vibes', cursive;;
 }
@@ -189,6 +199,9 @@ h1 {
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  background: white;
+  margin-left: 35%;
+  margin-right: 35%;
 }
 
 .written-review {
