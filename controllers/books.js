@@ -13,9 +13,14 @@ module.exports = {
 }
 
 function deleteBook(req, res) {
-    Book.findByIdAndDelete(req.params.id)
-    .then(() => {
+    Book.findById(req.params.id)
+    .then((book) => {
+        let idx = book.collectedBy.indexOf(req.user._id);
+        book.collectedBy.splice(idx, 1);
+        book.save()
+        .then(() => {
         res.redirect(`/books`)
+        })
     })
 }
 
