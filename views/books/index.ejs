@@ -1,9 +1,8 @@
 <%- include('../partials/header') %>
-<h1>Here are your latest reads</h1>
-<div class="review-page-header" >
+<h1>📖 Here are your latest reads </h1>
+<div class="form-group" >
         <% if (!books.length) { %>
-          <button class="btn btn-dark"><a href="/books/new">📚  No books? Let's add some! 📚</a></button>
-            <img id="book-tree" src="/../images/book-tree.jpeg" alt="">
+          <button class="btn btn-success"><a href="/books/new">📚  No books? Let's add some! 📚</a></button>
           </div>
             <% } %> 
 <div class="book-list-page">
@@ -15,10 +14,10 @@
             <p class="card-text">
               Author: <%= b.author %>
             </p>
+            <a href="/books/<%= b._id %>" class="btn btn-secondary">Add A Review</a> <br>
             <p class="card-text-twice">
               Have you read it before? <%= b.readTwice ? 'Yes' : 'No' %> %>
             </p>
-            <a href="/books/<%= b._id %>" class="btn btn-secondary">Add A Review</a> <br>
           </div>
           <form action="/books/<%= b._id %>?_method=DELETE" method="POST">
             <td><button type="submit"class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">

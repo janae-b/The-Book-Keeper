@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
 
-    <h1> <%= book.title %> <br>
-      Author: <%= book.author %></h1>
+    <h1>📖 <%= book.title %> <br>
+      By: <%= book.author %> 📖</h1>
 
 
 
@@ -33,7 +33,7 @@
     </fieldset>
 </form>
 <% } %>
-<div class="written-review">
+<div class="message-page">
 <% if (book.reviews.length) { %>
   <table>
     <thead>
@@ -60,12 +60,11 @@
     </tbody>
   </table>
 <% } else { %>
-  <h5>No Reviews Yet</h5>
+  <h3>No Reviews Yet</h3><br>
 <% } %>
 </div>
-<h3>Would you like to update your book?</h3>
-<div class="update-book-form">
-
+<div class="message-page">
+  <h3>Would you like to update your book?</h3>
 <form action="/books/<%= book._id %>?_method=PUT" method="POST">
   <input type="text" value="<%= book.title %>" name="title" placeholder="Title">
   <input type="text" value="<%= book.author %>" name="author" placeholder="Author">
