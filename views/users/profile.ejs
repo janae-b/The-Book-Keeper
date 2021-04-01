@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <div class="profile-page">
-<h3><%= title %></h3>
+<h1><%= title %></h1>
 
 <div class="profile-card" style="width: 36rem;">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -39,11 +39,11 @@
 			role="tabpanel"
 			aria-labelledby="profileinfo-tab"
 		>
-      <div class="card-body">
-	      <h5 class="card-title">Name: <%= user.name %></h5>
-        <p class="card-text">Nickname: <%= user.nickname %></p>
-        <p class="card-text">Email: <%= user.email %></p>
-        <p class="card-text">Bio: <%= user.bio %></p>
+      <div class="card-body-profile">
+	      <p class="card-text-profile">Name: <%= user.name %></p>
+        <p class="card-text-profile">Nickname: <%= user.nickname %></p>
+        <p class="card-text-profile">Email: <%= user.email %></p>
+        <p class="card-text-profile">Bio: <%= user.bio %></p>
       </div>
     </div>
     <% // This is the card for the 'update' tab %>
