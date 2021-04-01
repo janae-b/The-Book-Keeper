@@ -3,18 +3,18 @@
 
 <h1>📖 <%= title %> 📖</h1>
 <div class=message-page>
-<h4><%= message.title %></h4>
-<h5>
+<h3><%= message.title %></h3>
+<h4>
 	Posted on <%= message.createdAt.toLocaleString() %> - <%= message.postedBy %>
 	<img id="avatar" width="30" src="<%= message.avatar %>" alt="">
-</h5>
+</h4>
 
 <% message.replies.forEach(reply => { %>
-  <h6>
+  <h5>
 		<%= reply.message %> - <%= reply.postedBy %> - 
 		<%= reply.createdAt.toLocaleString() %> 
 		<img id="avatar" width="25" src="<%= reply.avatar %>" alt="">
-	</h6>
+	</h5>
 <% }) %>
 
 <form action="/messages/<%= message._id %>" method="POST">

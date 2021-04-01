@@ -12,13 +12,13 @@
           <div class="card-body">
             <h2 class="card-title"><%= b.title %> </h2>
             <p class="card-text">
-              Author: <%= b.author %>
+              By: <%= b.author %>
             </p>
             <p class="card-text-twice">
               Read before? <%= b.readTwice ? 'Yes' : 'No' %> %>
             </p>
             <br>
-            <a href="/books/<%= b._id %>" class="btn btn-info">Add A Review</a> <br>
+            <a href="/books/<%= b._id %>" class="btn btn-info">Add A Review or Update</a> <br>
           </div>
           <form action="/books/<%= b._id %>?_method=DELETE" method="POST">
             <td><button type="submit"class="btn-delete btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
