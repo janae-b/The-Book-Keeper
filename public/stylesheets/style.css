@@ -77,6 +77,11 @@ h1 {
   margin-right: 30%;
 }
 
+.btn-create {
+  width: fit-content;
+  margin-top: 2%;
+}
+
 .message-board {
   display: flex;
   flex-direction: column;
@@ -109,13 +114,9 @@ h1 {
 }
 
 .form-group {
-  display: flex;
-  justify-content: center;
-  justify-self: center;
-  text-align: center;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-bottom: 2%;
 }
 
 .card {

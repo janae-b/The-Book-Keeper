@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h1>📖 Message Board 📖</h1>
-<div class="message board">
+
 <form action="/messages" method="POST">
   <div class="form-group">
     <input 
@@ -11,11 +11,13 @@
 			name="title"
 			placeholder="Enter message..."
 		>
-  <button type="submit" class="btn btn-warning">Create Post</button>
+    <button type="submit" class="btn-create btn-warning">Create Post</button>
   </div>
+  
 </form>
 
 <% messages.forEach(message => { %>
+  <div class="message board">
   <div class="card-message">
     <div class="card-header">
       <%= message.postedBy %> 

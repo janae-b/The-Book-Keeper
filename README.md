@@ -23,10 +23,12 @@ I have always loved reading and am even part of a book club.  I tend to keep tra
 * Google OAuth
 * Heroku
 * Bootstrap
+* Pure CSS
 * FontAwesome
 * Hero Patterns
 
-  
+## Credits:
+* Icons made by Freepik from www.flaticon.com   
 
 # Next Steps:
 * Ability to create multiple lists
