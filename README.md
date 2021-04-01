@@ -30,7 +30,9 @@ This app helps you keep track of the books you've recently read. You add the boo
 
 ## Credits:
 * Icons made by Freepik from www.flaticon.com 
-* Background vector created by pikisuperstar - www.freepik.com</a>  
+* Background vector created by pikisuperstar - www.freepik.com</a> 
+* error image from literallydarling.com
+* images from deviant art 
 
 # Next Steps:
 * Ability to create multiple lists
