@@ -9,7 +9,7 @@
 <% if (book.reviews.length) { %>
   <br>
     <% } else { %>
-<form class="pure-form pure-form-stacked" id="add-review-form" method="POST" action="/books/<%= book._id %>/reviews">
+<form class="add-review pure-form-stacked" id="add-review-form" method="POST" action="/books/<%= book._id %>/reviews">
   <fieldset>
     <legend class="review-title">Add a Review</legend>
     <div class="pure-g">
@@ -43,9 +43,7 @@
       </tr>
     </thead>
     <tbody>
-      <% let total = 0 %>
       <% book.reviews.forEach(function(r) { %>
-        <% total += r.rating %>
         <tr>
           <td><%= r.createdAt.toLocaleDateString() %></td>
           <td><%= r.comment %></td>
@@ -60,7 +58,7 @@
     </svg> Delete</button></td>
   </form>
 <% } else { %>
-  <div class='review-title'>No Reviews Yet</div><br>
+  
 <% } %>
 </div>
 <div class="message-page">

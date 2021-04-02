@@ -3,7 +3,7 @@
 <h1>📖 Message Board 📖</h1>
 
 <form action="/messages" method="POST">
-  <div class="fake-form-group">
+  <div class="message-form-group">
     <input 
 			type="text"
 			class="form-control"
@@ -17,7 +17,6 @@
 </form>
 
 <% messages.forEach(message => { %>
-  <div class="message board">
   <div class="card-message">
     <div class="card-header">
       <%= message.postedBy %> 
@@ -29,7 +28,6 @@
       <a href="/messages/<%= message._id %>" class="btn btn-primary">See Post</a>
     </div>
   </div>
-</div>  
 <% }) %>
 
 <%- include('../partials/footer') %>
