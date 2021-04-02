@@ -64,13 +64,13 @@ function create(req, res) {
     req.body.readTwice = !!req.body.readTwice;
     const book = new Book(req.body)
     book.save(function(err) {
-      if (err){ return res.redirect('/books')} 
-      console.log(book)
-      res.redirect(`/books`)
+        if (err){ return res.redirect('/books')} 
+        console.log(book)
+        res.redirect(`/books`)
     })
-  }
+}
 
-  function update(req, res) {
+function update(req, res) {
     req.body.readTwice = !!req.body.readTwice
     Book.findByIdAndUpdate(req.params.id, req.body, {new: true})
     .then((book) => {
