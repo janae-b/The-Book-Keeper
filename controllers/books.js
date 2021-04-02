@@ -9,6 +9,7 @@ module.exports = {
     show,
     createReview,
     delete: deleteBook,
+    deleteReview,
     update,
 }
 
@@ -20,6 +21,18 @@ function deleteBook(req, res) {
         book.save()
         .then(() => {
         res.redirect(`/books`)
+        })
+    })
+}
+
+function deleteReview(req, res) {
+    Book.findById(req.params.id)
+    .then((book) => {
+        let idx = book.reviews.indexOf(req.user._id);
+        book.reviews.splice(idx, 1);
+        book.save()
+        .then(() => {
+        res.redirect(`/books/${book._id}`)
         })
     })
 }

@@ -21,7 +21,7 @@
             <% if (!b.reviews.length) { %>
               <a href="/books/<%= b._id %>" class="btn-review btn-info">Add A Review or Update</a> <br>
                 <% } else { %>
-                  <a href="/books/<%= b._id %>" class="btn-review btn-info">See review or Update</a> <br>
+                  <a href="/books/<%= b._id %>" class="btn-review btn-info">Update Book Info</a> <br>
                 <% } %>
             <form action="/books/<%= b._id %>?_method=DELETE" method="POST">
               <td><button type="submit"class="btn-delete btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
