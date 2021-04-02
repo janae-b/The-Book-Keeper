@@ -65,7 +65,7 @@ When you click on a message, these are the details of the message and where you 
 * Ability to create multiple lists
 * Use an API
 * Make friends with other users
-* Show the book lists in each user's profile
+* Show the book lists in each user's profile and be able to view other books and reviews
 * A button that let's people say their overall impression
-* Like to create joint lists with others
-* Have the reviews more accessible
+* Create joint lists with others
+
