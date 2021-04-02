@@ -1,6 +1,5 @@
 <%- include('../partials/header') %>
 
-
 <h1>📖 <%= title %> 📖</h1>
 <div class=message-page>
 <h3><%= message.title %></h3>
@@ -18,16 +17,16 @@
 <% }) %>
 
 <form action="/messages/<%= message._id %>" method="POST">
-  <div class="form-group">
-    <input 
+    <div class="form-group">
+        <input 
 			type="text"
 			class="form-control"
 			aria-describedby="message"
 			name="message"
 			placeholder="Enter reply..."
 		>
-  </div>
-  <button type="submit" class="btn btn-primary">Reply</button>
+  	</div>
+    <button type="submit" class="btn btn-primary">Reply</button>
 </form>
 </div>
 

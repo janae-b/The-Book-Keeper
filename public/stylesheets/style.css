@@ -5,14 +5,10 @@ html {
 /* The Universal Selector */
 *, /* All elements*/
 *::before, /* All ::before pseudo-elements */
-*::after { /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default
-     but can be over-ridden as needed */
+*::after { 
   box-sizing: inherit;
 }
 
-/* resets font size to be 62.5% of the user preference - 
-     in most browser configurations this will be 10px */
 :root {
     font-size: 62.5%
 }
@@ -21,10 +17,6 @@ body {
   background-image: url(../images/shelving.jpg);
   max-width:100%;
   background-size: 1200px;
-  ;
-  /* Use a system font, if none are available use an available sans-sarif font */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
   font-size: large;
 }

@@ -5,39 +5,18 @@
 <div class="profile-card" style="width: 40rem;">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-      <a 
-				class="nav-link active"
-				id="profileinfo-tab"
-				data-toggle="tab"
-				href="#profileinfo"
-				role="tab"
-				aria-controls="profileinfo"
-				aria-selected="true"
-			>
+      <a class="nav-link active" id="profileinfo-tab" data-toggle="tab" href="#profileinfo" role="tab" aria-controls="profileinfo" aria-selected="true">
 				My Info
 			</a>
     </li>
     <li class="nav-item">
-      <a 
-				class="nav-link"
-				id="updateinfo-tab"
-				data-toggle="tab"
-				href="#updateinfo"
-				role="tab"
-				aria-controls="updateinfo"
-				aria-selected="false"
-			>
+      <a class="nav-link" id="updateinfo-tab" data-toggle="tab" href="#updateinfo" role="tab" aria-controls="updateinfo" aria-selected="false">
 				Update Info
 			</a>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
-    <div 
-			class="tab-pane fade show active"
-			id="profileinfo"
-			role="tabpanel"
-			aria-labelledby="profileinfo-tab"
-		>
+    <div class="tab-pane fade show active" id="profileinfo" role="tabpanel" aria-labelledby="profileinfo-tab">
       <div class="card-body-profile">
 	      <p class="card-text-profile">Name: <%= user.name %></p>
         <p class="card-text-profile">Nickname: <%= user.nickname %></p>
@@ -45,12 +24,7 @@
         <p class="card-text-profile">Bio: <%= user.bio %></p>
       </div>
     </div>
-    <div
-      class="tab-pane fade"
-      id="updateinfo"
-      role="tabpanel"
-      aria-labelledby="updateinfo-tab"
-    >
+    <div class="tab-pane fade" id="updateinfo" role="tabpanel" aria-labelledby="updateinfo-tab">
       <div class="card-body">
         <form action="/users/profile?_method=PUT" method="POST">
           <div class="form-row">

@@ -5,7 +5,7 @@ By: <%= book.author %> </h1>
 
 <% if (book.reviews.length) { %>
   <br>
-    <% } else { %>
+<% } else { %>
 <form class="add-review pure-form-stacked" id="add-review-form" method="POST" action="/books/<%= book._id %>/reviews">
   <fieldset>
     <legend class="review-title">Add a Review</legend>
@@ -55,16 +55,16 @@ By: <%= book.author %> </h1>
     </svg> Delete</button></td>
   </form>
 <% } else { %>
-  
+
 <% } %>
 </div>
 <div class="message-page">
   <h2><strong>Would you like to update your book?</strong></h2>
-<form action="/books/<%= book._id %>?_method=PUT" method="POST">
-  <input type="text" value="<%= book.title %>" name="title" placeholder="Title">
-  <input type="text" value="<%= book.author %>" name="author" placeholder="Author"> <br>
-  <input type="checkbox" <%= book.readTwice ? 'checked' : '' %> name="readTwice">Have you read this before?<br><br>
-  <button type='submit' class="btn btn-dark">Update Book Info</button>
-</form>
+    <form action="/books/<%= book._id %>?_method=PUT" method="POST">
+      <input type="text" value="<%= book.title %>" name="title" placeholder="Title">
+      <input type="text" value="<%= book.author %>" name="author" placeholder="Author"> <br>
+      <input type="checkbox" <%= book.readTwice ? 'checked' : '' %> name="readTwice">Have you read this before?<br><br>
+      <button type='submit' class="btn btn-dark">Update Book Info</button>
+    </form>
 </div>
 <%- include('../partials/footer') %>
