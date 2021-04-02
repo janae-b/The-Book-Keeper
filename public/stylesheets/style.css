@@ -250,3 +250,18 @@ h1 {
   font-size: small;
 }
 
+.bio-name {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-right: 88%;
+  font-size: 2.5rem;
+}
+
+.nickname {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5rem;
+}
+

@@ -78,7 +78,6 @@ function create(req, res) {
     const book = new Book(req.body)
     book.save(function(err) {
         if (err){ return res.redirect('/books')} 
-        console.log(book)
         res.redirect(`/books`)
     })
 }
