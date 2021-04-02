@@ -12,6 +12,33 @@ This app helps you keep track of the books you've recently read. You add the boo
 
 # Screenshots
 
+![Welcome](Welcome.png)
+Here's the welcome page for Book Keeper when you first go to the app.
+
+![EmptyBookList](EmptyBookList.png)
+This is the first page the user sees when they log in.  It will be populated with the books they add but for now has a button that will lead them to the add a book page.
+
+![AddaBook](AddaBook.png)
+A user can type in the title and author's name of the latest book they have read.  It will then get added to their book list.
+
+![Booklist](Booklist.png)
+This is what the book list page looks like after a user has added some of their latest books.
+
+![Review](Reveiw.png)
+You can leave a review or update your book on this page.  You can also delete your review if you'd like to change it.
+
+![Profile](profilePage.png)
+This is what everyone's profile page looks like with their unique information.
+
+![OurReaders](OurReaders.png)
+This page shows all of the users who have logged into the app.
+
+![MessageBoard](MessageBoard.png)
+Here's the message board page where anyone can write a post.  All users can see all of the posts.
+
+![Message](MessageDetails.png)
+When you click on a message, these are the details of the message and where you can reply to a certain message.
+
 # Technologies Used:
 * Node.js
 * Express
