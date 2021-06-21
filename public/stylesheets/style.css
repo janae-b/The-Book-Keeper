@@ -23,10 +23,14 @@ body {
 
 nav {
   background-color: gray;
-  font-size: 2.6rem;
+  font-size: 2rem;
   align-items: center;
   justify-content: center;
   font-family: 'New Tegomin', serif;
+}
+
+.nav-link {
+  margin-right: 5%;
 }
 
 main {
